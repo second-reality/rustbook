@@ -1,3 +1,7 @@
+const A: u32 = 43;
+
 fn main() {
-    println!("Hello, world!");
+    let mut x = 3;
+
+    x = 3;
 }
