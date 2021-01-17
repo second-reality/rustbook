@@ -37,6 +37,7 @@ fn main() {
     slice_try("Good");
     let mut try_str = String::from("Good from strings too");
     slice_try(&mut try_str);
+    //let other = try_str; // Forbidden, because will make next line illegal (moved try_str)
     slice_try(&mut try_str[2..6]);
 
     iterate_array();
