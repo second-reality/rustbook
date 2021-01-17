@@ -11,5 +11,7 @@ fn compute(x: u32) -> u32
 fn main() {
     let mut x = 3;
 
+    let number = if compute(x) > 3 { 5 } else { 6 };
+
     x = 3;
 }
