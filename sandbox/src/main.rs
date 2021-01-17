@@ -10,9 +10,10 @@ fn compute(x: u32) -> u32
 
 fn iterate_array()
 {
-    let a = [10, 20, 30, 40, 50];
+    let mut a = [10, 20, 30, 40, 50];
 
-    for val in a.iter() {
+    for val in a.iter_mut() {
+        *val += 1;
         println!("{}", val);
     }
 }
