@@ -16,6 +16,10 @@ fn iterate_array()
         *val += 1;
         println!("{}", val);
     }
+
+    for idx in 0 .. a.len() {
+        println!("{}", a[idx]);
+    }
 }
 
 fn main() {
