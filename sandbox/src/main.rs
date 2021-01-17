@@ -35,9 +35,9 @@ fn main() {
     x = number;
 
     slice_try("Good");
-    let try_str = String::from("Good from strings too");
-    slice_try(&try_str);
-    slice_try(&try_str[2..6]);
+    let mut try_str = String::from("Good from strings too");
+    slice_try(&mut try_str);
+    slice_try(&mut try_str[2..6]);
 
     iterate_array();
 
