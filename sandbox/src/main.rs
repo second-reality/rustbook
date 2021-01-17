@@ -13,5 +13,7 @@ fn main() {
 
     let number = if compute(x) > 3 { 5 } else { 6 };
 
-    x = 3;
+    x = number;
+
+    println!("x {}", x);
 }
