@@ -22,12 +22,22 @@ fn iterate_array()
     }
 }
 
+fn slice_try(s: &str)
+{
+    println!("{}", s);
+}
+
 fn main() {
     let mut x = 3;
 
     let number = if compute(x) > 3 { 5 } else { 6 };
 
     x = number;
+
+    slice_try("Good");
+    let try_str = String::from("Good from strings too");
+    slice_try(&try_str);
+    slice_try(&try_str[2..6]);
 
     iterate_array();
 
