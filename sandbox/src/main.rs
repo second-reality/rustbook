@@ -74,14 +74,14 @@ fn main() {
     println!("{}", blop);
 
     // format macro does not take ownership of strings!
-    let blop_format = format!("{} | {} | {}", tata, blop, blop); 
+    let blop_format = format!("{} | {} | {}", tata, blop, blop);
 
     println!("{}", blop_format);
 
     //let hello = "Здравствуйте";
     //let s = &hello[0..3]; // runtime check for char border when using slice
     // that is why rust forbids direct access to memory: hello[2]
-    
+
     // replace part of string
     let mut s = String::from("α is alpha, β is beta");
     let beta_offset = s.find('β').unwrap_or(0); // do not replace anything if not found
@@ -97,7 +97,7 @@ fn main() {
     scores.insert(String::from("Yellow"), 10);
 
     let val = scores.get(&String::from("Yellow"));
-    println!("{}", val.unwrap());
+    println!("{}", val.unwrap()); // unwrap is nice while you develop, you can deal with errors after :)
     scores.entry(String::from("Blue")).or_insert(50);
 
     println!("{:?}", &scores);
