@@ -64,4 +64,12 @@ fn main() {
     // let blop2 = Other::Blop { field_1: 0, field_2: 0 };
 
     println!("{:?}", blop);
+
+    let toto = String::from("trying");
+    let tata = String::from("tata");
+    // +, takes ownership of string toto, and add tata to it
+    // thus, toto is accessible after, so it is efficient (no useless copy needed)
+    let blop = toto + " " + &tata;
+
+    println!("{}", blop);
 }
