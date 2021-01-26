@@ -72,4 +72,9 @@ fn main() {
     let blop = toto + " " + &tata;
 
     println!("{}", blop);
+
+    // format macro does not take ownership of strings!
+    let blop_format = format!("{} | {} | {}", tata, blop, blop); 
+
+    println!("{}", blop_format);
 }
