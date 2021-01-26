@@ -89,4 +89,16 @@ fn main() {
     // Replace the range up until the β from the string
     s.replace_range(..beta_offset, "that is nice ");
     assert_eq!(s, "that is nice β is beta");
+
+    use std::collections::HashMap;
+
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 10);
+
+    let val = scores.get(&String::from("Yellow"));
+    println!("{}", val.unwrap());
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("{:?}", &scores);
 }
