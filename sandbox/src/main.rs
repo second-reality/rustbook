@@ -77,4 +77,8 @@ fn main() {
     let blop_format = format!("{} | {} | {}", tata, blop, blop); 
 
     println!("{}", blop_format);
+
+    //let hello = "Здравствуйте";
+    //let s = &hello[0..3]; // runtime check for char border when using slice
+    // that is why rust forbids direct access to memory: hello[2]
 }
