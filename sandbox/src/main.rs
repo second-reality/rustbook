@@ -81,4 +81,12 @@ fn main() {
     //let hello = "Здравствуйте";
     //let s = &hello[0..3]; // runtime check for char border when using slice
     // that is why rust forbids direct access to memory: hello[2]
+    
+    // replace part of string
+    let mut s = String::from("α is alpha, β is beta");
+    let beta_offset = s.find('β').unwrap_or(0); // do not replace anything if not found
+
+    // Replace the range up until the β from the string
+    s.replace_range(..beta_offset, "that is nice ");
+    assert_eq!(s, "that is nice β is beta");
 }
